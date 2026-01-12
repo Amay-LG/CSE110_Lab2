@@ -18,7 +18,7 @@ public class MyQueue {
     }
     
     public boolean isFull() {
-        return size == elements.length-1;
+        return size == elements.length;
     }
     
     public int size() {
@@ -40,7 +40,7 @@ public class MyQueue {
         }
         int element = elements[front];
         front = (front + 1) % elements.length;
-        size++;
+        size--;
         return element;
     }
     
